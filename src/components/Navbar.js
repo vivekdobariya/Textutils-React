@@ -61,7 +61,7 @@ Navbar.propTypes = {
     aboutText: PropTypes.string.isRequired
 }
 
-Navbar.defualtprops = {
-    title: 'Set title hear',
+Navbar.defaultProps = {
+    title: 'Set title here',
     aboutText: 'About'
-};
+  };
