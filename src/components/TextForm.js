@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = () => {
-        // console.log("uppercase was clicked: "+ text);
         let newText = text.toUpperCase();
         setText(newText);
         props.showAlert("Converted to uppercase!", "success")
     }
 
     const handleLoClick = () => {
-        // console.log("lowercase was clicked: "+ text);
         let newText = text.toLowerCase();
         setText(newText);
         props.showAlert("Converted to lowercase!", "success")
@@ -33,13 +31,11 @@ export default function TextForm(props) {
     }
 
     const handleOnChange = (event) => {
-        // console.log("on change"); 
         setText(event.target.value)
     }
 
     const [text, setText] = useState("");
-    // text = "new text"; wrong way to change the state
-    // setText("new text"); correct way to change the state
+    
     return (
         <>
             <div className="container" style={{ color: props.mode === "dark" ? "white" : "#042743" }}>
@@ -57,7 +53,7 @@ export default function TextForm(props) {
             </div>
             <div className="container my-3" style={{ color: props.mode === "dark" ? "white" : "#042743" }}>
                 <h2>Your text summery</h2>
-                <p>{text.split(" ").filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
+                <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
                 <p>{0.008 * text.split("").filter((element) => { return element.length !== 0 }).length} Minutes read</p>
                 <h3>Preview</h3>
                 <p>{text.length > 0 ? text : "Nothing to Preview!"}</p>

@@ -30,21 +30,12 @@ function App() {
       setmode("dark")
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enabled", "success");
-      // document.title = "TextUtils - Dark Mode";
-      // setInterval(()=>{
-      //   document.title = "TextUtils - Amazing"
-      // }, 2000);
-      // setInterval(()=>{
-      //   document.title = " Install TextUtils Now"
-      // }, 1500);
-
 
     }
     else {
       setmode("light")
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      // document.title = "TextUtils - Light Mode"
 
     }
   }
@@ -57,8 +48,6 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            {/* /users --->Component -1
-                 /users/home  --->Component -2 */}
             <Route exact path="/about"
               element={<About mode={mode} />}>
             </Route>
