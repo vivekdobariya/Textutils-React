@@ -10,7 +10,6 @@ import {
   Routes
 } from "react-router-dom";
 
-
 function App() {
   const [mode, setmode] = useState("light");
   const [alert, setAlert] = useState(null);
@@ -41,8 +40,6 @@ function App() {
   }
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Navbar title= "TextUtils"/> */}
       <Router>
         <Navbar title="TextUtils" aboutText="About" mode={mode} togglemode={togglemode} />
         <Alert alert={alert} />
