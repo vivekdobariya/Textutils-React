@@ -29,13 +29,11 @@ function App() {
       setmode("dark")
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enabled", "success");
-
     }
     else {
       setmode("light")
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-
     }
   }
   return (
@@ -45,11 +43,11 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about"
-              element={<About mode={mode} />}>
-            </Route>
             <Route exact path="/"
               element={<TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />}>
+            </Route>
+            <Route exact path="/about"
+              element={<About mode={mode} />}>
             </Route>
           </Routes>
         </div>
