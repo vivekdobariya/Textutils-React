@@ -43,10 +43,10 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/"
+            <Route exact path="/Textutils-React"
               element={<TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />}>
             </Route>
-            <Route exact path="/about"
+            <Route exact path="/Textutils-React/about"
               element={<About mode={mode} />}>
             </Route>
           </Routes>
